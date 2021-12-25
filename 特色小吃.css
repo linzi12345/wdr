@@ -1,0 +1,86 @@
+body {
+  margin: 4px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: linear-gradient(
+    0deg,
+    rgba(255, 0, 0, 0.171),
+    rgba(0, 204, 255, 0.493)
+  );
+  height: auto;
+}
+.food {
+  column-count: 4;
+  column-gap: 0;
+}
+.snack {
+  padding: 2px;
+}
+.snack img {
+  display: block;
+  width: 300px;
+  height: 460px;
+}
+.eat1 img {
+  width: 300px;
+  height: 360px;
+}
+.eat2 img {
+  width: 300px;
+  height: 420px;
+}
+.eat3 img {
+  width: 300px;
+  height: 320px;
+}
+.eat4 img {
+  width: 300px;
+  height: 390px;
+}
+.eat5 img {
+  width: 300px;
+  height: 350px;
+}
+.eat6 img {
+  width: 300px;
+  height: 375px;
+}
+.eat7 img {
+  width: 300px;
+  height: 320px;
+}
+.eat8 img {
+  width: 300px;
+  height: 360px;
+}
+.eat9 img {
+  width: 300px;
+  height: 340px;
+}
+.eat10 img {
+  width: 300px;
+  height: 365px;
+}
+.eat11 img{
+    width: 300px;
+    height: 350px;
+}
+.eat12 img{
+    width: 300px;
+    height: 370px;
+}
+.eat13 img{
+    width: 300px;
+    height: 320px;
+}
+.eat14 img{
+    width: 300px;
+    height: 420px;
+}
+.eat15 img{
+    width: 300px;
+    height: 340px;
+}
+.eat16 img{
+    width: 300px;
+    height: 390px;
+}

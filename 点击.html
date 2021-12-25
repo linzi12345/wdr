@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>彩蛋</title>
+    <style>
+        body{
+            background-color: rgb(35,35,35);
+        }
+        span{
+            /* 让弹出来的文字不被选中，影响操作体验 */
+            user-select: none;
+            cursor: default;
+            font-size: 20px;
+            color: blanchedalmond;
+            position: absolute;
+            transition: 1s;
+        }
+        h2{
+        text-align: center;
+        color: white;
+        font: 100px 900 '';
+        font-family: '隶书';
+        }
+    </style>
+</head>
+<body>
+            <h2 >随意点击 </h2>
+    <script>
+      
+        var wenzi=["大海是生命的母体；海水是生命的洗礼玉液；而面向大海，沐浴海风，感受滚滚红尘间千种风情乃人生一大乐事。","我看见过静清绿的海，玩赏过水平如镜的西湖，却从没看见过大海的壮阔。大海的水真蓝啊，蓝得仿佛是一块毫无瑕疵的蓝宝石；",
+        "少言自寡，胜过千言万语","大海的水真清啊，清得仿佛可以看到海底的童话世界；大海真辽阔啊，从海的这一边看不到海的那一边。",
+        "无边无垠的海水里，朵朵欢快的浪花们轻快优美的舞姿，那是大海开心的时刻里展露出来的欢乐笑颜。",
+        "夜幕下，幽蓝的海水里，点点星光揉碎了的身影，那是大海于神秘的海边夜色里给人们编织的神秘深邃的梦境",
+        "那碧绿的海面,像丝绸一样柔和,微荡着涟猗从高处看,烟波浩渺,一望无际;而有时,海水就在你的脚边,轻轻絮语。",
+        "海南我爱你！！！",
+        "不求苍天俯就我的美意，但求永远"]
+         document.onclick=function(x){
+            var span=document.createElement('span');
+            span.style.left=x.clientX+'px';
+            span.style.top=x.clientY+'px';
+            span.style.color='blanchedalmond';
+            span.style.position='absolute';
+            span.style.transition=1+'s';
+            /*输出文字*/ 
+            span.innerHTML=wenzi[Math.floor(Math.random()*wenzi.length)];
+            /*添加span*/
+            
+            /*动画 opacity透明度，100秒刷新一次 向上偏移*/
+            setTimeout(function(){
+                span.style.opacity = "1"
+                span.style.transform = "translateY(-100px)"
+            },100)
+            setTimeout(function(){
+                span.style.opacity = "0"
+                span.style.transform = "translateY(-230px)"
+            },1500)
+          
+         
+            var you=document.getElementsByTagName('span');
+            for(var i = 0;i<you.length;i++){
+                if(you[i].style.opacity === "0"){
+                    document.body.removeChild(you[i])
+                }
+            }
+            document.body.appendChild(span);
+         }
+    </script>
+</body>
+</html>

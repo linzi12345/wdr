@@ -1,0 +1,568 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"> 
+<head> 
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+    <title>家乡主题网站</title> 
+    <style>
+              
+        .a2{
+            position: relative;
+            perspective: 1500px;/**/
+            top: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .b2{
+            width: 400px;
+            height: 250px;
+            position: absolute;
+            transform-style: preserve-3d;
+            animation: a2 8s infinite cubic-bezier(.7,0,.17,1);
+        }
+        .b2 div{
+            position: absolute;
+            background-size: cover;
+            opacity: .9;
+            width: 400px;
+            height: 250px;
+            transform: rotateY(calc(var(--i)*120deg)) translateZ(600px);
+        }
+        @keyframes a2{
+            0%{
+                transform: translateZ(-100px) rotateY(0);
+            }
+            33%{
+                transform: translateZ(-100px) rotateY(-120deg);
+            }
+            66%{
+                transform: translateZ(-100px) rotateY(-240deg);
+            }
+            100%{
+                transform: translateZ(-100px) rotateY(-360deg);
+            }
+        }
+        .c2{
+            background-image: url("./img/首页.gif");
+        }
+        .d2{
+            background-image: url("./img/首页2.gif");
+        }
+        .e2{
+            background-image: url("./img/首页3.gif");
+        }
+        .s{position: fixed; 
+            top: 0;
+            height: 500px; 
+            width: 100%;} 
+        body{
+               
+            background: linear-gradient(0deg, #eae5c9, #6cc6cb); 
+            height: 1800px;
+            background-size: cover;
+             background-position: auto auto;
+            
+            
+        }
+        .s {   margin: 0 auto; 
+            height: 100px;
+            width: 200px;
+        }
+        .pic{
+            display: inline-block;
+        }
+        .nav{
+
+            display: inline-block;/*并列的盒子加inline*/
+        }
+        .nav li{
+            margin: 15px;
+            float: left;
+            width: 100px;
+
+        }
+        .nav a{
+            color: white;
+            text-decoration: none;
+        } 
+  
+      
+ 
+    .a{
+        position: relative;
+        top: 200px;
+        width: 500px;
+        height: 120px;
+        border: solid 10px #fff;
+        box-shadow: 0 0 70px rgb(190,40,210);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* 设置鼠标移上去时变成小手形状 */
+        cursor: pointer;
+    }
+    .a::after{
+        content: '';
+        position: absolute;
+        width: 500px;
+        height: 120px;
+        box-shadow: 0 0 5px rgba(190,40,210);
+        background-color: rgba(100,30,225,.4);
+    }
+    .a:hover{
+        animation: a 1.5s;
+    }
+    @keyframes a{
+        0%,34%,68%,100%{
+            border: solid 10px #fff;
+            box-shadow: 0 0 70px rgb(190,40,210);
+        }
+        17%,51%,85%{
+            border: solid 10px rgba(255,0,0,.5);
+            box-shadow: 0 0 90px rgba(255,0,0,.8);
+        }
+    }
+    .b,.b::before{
+        z-index: 999;
+        color: #fff;
+        position: absolute;
+        font-size: 65px;
+        font-weight: 900;
+        /* 设置字体间距 */
+        letter-spacing: 12px;
+    }
+    .b::before{
+        content: 'HAINAN';
+        text-shadow: -5px -5px 0px rgb(211,250,9),5px 5px 0px rgb(25,10,240);
+        /* 使用缩放的方式创建可见显示取余，括号里的四个值分别是top，right，bottom，left */
+        clip-path: inset(100% 0px 0px 0px);
+
+    }
+    .a:hover .b::before{
+        /* steps设置逐帧动画，值越小越卡顿 */
+        animation: move 1.25s steps(2);
+    }
+    /* 这是制造混乱的位置和高宽，可以自行改变，随机的 */
+    @keyframes move{
+        0%{
+            clip-path:inset(80% 0px 0px 0px);
+            transform:translate(-20px,-10px)
+        }
+        10%{
+            clip-path:inset(10% 0px 85% 0px);
+            transform:translate(10px,10px)
+        }
+        20%{
+            clip-path:inset(80% 0px 0px 0px);
+            transform:translate(-10px,10px)
+        }
+        30%{
+            clip-path:inset(10% 0px 85% 0px);
+            transform:translate(0px,5px)
+        }
+        40%{
+            clip-path:inset(50% 0px 30% 0px);
+            transform:translate(-5px,0px)
+        }
+        50%{
+            clip-path:inset(10% 0px 30% 0px);
+            transform:translate(5px,0px)
+        }
+        60%{
+            clip-path:inset(40% 0px 30% 0px);
+            transform:translate(5px,10px)
+        }
+        70%{
+            clip-path:inset(50% 0px 30% 0px);
+            transform:translate(-10px,10px)
+        }
+        80%{
+            clip-path:inset(80% 0px 5% 0px);
+            transform:translate(20px,-10px)
+        }
+        90%{
+            clip-path:inset(80% 0px 0px 0px);
+            transform:translate(-10px,0px)
+        }
+        100%{
+            clip-path:inset(80% 0px 0px 0px);
+            transform:translate(0px,0px)
+        }
+    }
+/*百叶*/
+.main li img{
+    border-radius: 30px;
+
+}
+    .baiye::before{
+       
+       /* content: url(./img/gif7.png);*/
+        position: absolute;
+            left: 110px;
+            top: 25px;
+
+    }
+    .main{
+        width: 1505px;
+        height: 400px;
+        margin: 500px   auto 350px auto;
+        overflow: hidden;
+    }
+    li{
+        list-style: none;
+        width: 160px;
+        float: left;
+     
+        transition: all 1s;
+    }
+    .main:hover li{
+        width: 100px;
+    }
+    .main li:hover{
+        width: 960px;
+      
+    }
+
+
+
+    /*灯泡字*/
+    .dengpao{
+        position: relative;
+        font: 900 100px "";
+        color: #333;
+  
+
+    }
+    .dengpao span{
+        transition: .5s;
+        transition-delay:calc(var(--i)*.1s) ;/*动画延迟0.1s*/
+        animation: dpz  8s infinite linear;
+    }
+    @keyframes dpz {
+        0%,18%,20%,50% ,55%,80%,85% ,90%{
+
+        }
+  
+        100% {
+        color: #fff;
+        text-shadow: 0 0 10px #fff,
+        0 0 20 px #ffff,
+        0 0 30px #fff,
+        0 0 50px #fff,
+         0 0 80px #fff;
+        }
+    }
+    .dengpao:hover  span{
+        color: #fff;
+        text-shadow: 0 0 10px #fff,
+        0 0 20 px #ffff,
+        0 0 30px #fff,
+        0 0 50px #fff,
+         0 0 80px #fff;
+
+    }
+    /*点击*/
+
+
+    /*分裂字*/
+    .fl{
+     position: relative;
+     top: 250px;
+     width: 340px;
+     display: flex;/*弹性排列水平排列*/
+     justify-content: center;
+     margin: 0  auto;
+   
+     
+
+    }
+ 
+ .shang ,.xia{
+     font: 900 100px "" ;
+     line-height: 150px;
+     position: absolute/*关键*/;
+     color: brown ;
+  transition: .8s;
+
+ }
+ .xia{
+   clip-path: inset(49% 0 0 0);/*top right  bottom left分割下班部分*/
+   transition: .8s;
+ }
+ .shang{
+  clip-path: inset( 1% 0 50% 0);
+ }
+ .fl:hover .shang,.fl:hover .xia{
+    top: calc(var(--i)*1px) ;
+ }
+ .fl:hover .di {
+     opacity: 1;
+
+ }
+   .di{
+       text-decoration: none;
+       color: cyan;
+       font: 600 30px "";
+       line-height: 150px;
+       opacity: 0;
+       transition: .5s;
+   }
+   /*搜索框*/
+   body{
+        background-color: tomato;
+    }
+    .shousuo{
+        position: absolute;
+            top: 20%;    
+            right: 10%;
+            background-color: #2f3640;/*设置div标签*/
+            height: 40px;
+            border-radius: 40px;
+            padding: 10px;
+
+    }
+    .shousuo:hover .input{
+        width: 200px; 
+        padding: 0 6px;  
+    }
+    .shousuo:hover .cha{
+        background-color: wheat;
+    }
+    .input{
+        /*初始化*/
+        border: none;
+        background: none;
+        outline: none;
+        width: 0;
+        padding: 0;
+        transition: .4s;
+        line-height: 40px;
+    }
+    .cha img{
+        float: right;
+        height: 40px;
+    }
+   .wenzi p{
+       transition: .6s; 
+        opacity: 0;
+   }
+    .wenzi:hover p {
+        transition: 0.6s;
+        opacity: 1;
+    }
+    .wenzi:hover .p1,.p3{
+        transform: translateY(-20x);
+
+
+    }
+    .wenzi:hover .P2,.p4{
+        transform: translateY(20x) ;
+
+
+    }
+  
+    .shiping{
+       transition: .6s; 
+     
+   }
+ 
+
+    .wenzi p{
+        width: 600px;
+    }
+/*fu东文字*/
+  
+        .wenzi2 p{
+        
+            transition: .6s;
+         
+
+        }
+        .wenzi2:hover .p1 {
+            opacity: 1;
+            transform: translateX(30px);
+
+        }
+        .wenzi2:hover .p2 {
+            opacity: 1;
+            transform: translateX(-35px);
+        }
+        .wenzi2:hover .p3 {
+            opacity: 1;
+            transform: translateX(35px);
+        }
+        .wenzi2:hover .p4 {
+            opacity: 1;
+            transform: translateX(-35px);
+        }
+ 
+        /*导航条*/
+        .nav2{
+        position: absolute;
+        top: 2000px ;
+   
+       float: left;
+    }
+    .nav2 ul{
+        display: flex;/*水平排列*/
+
+    }
+     .nav2  li{
+        position: relative;/*关键相对地址则不会因为div的绝对地址尔发生偏移*/
+        list-style: none;
+        width: 200px;
+        height: 60px;
+        cursor: pointer;
+        transform-style:preserve-3d ;
+        transition: all 1s;
+    }
+    .nav2 ul li:hover{
+        transform:rotateX(90deg);/*x轴旋转*/
+    }
+    .nav2 ul li div{
+        width: 50px;
+        height: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        line-height: 50px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 400;
+        color: white;
+      
+    }
+    .nav2 ul li div:first-child{
+        background: #74adaa;
+    }
+    .nav2 ul li div:last-child{
+        background-color: #74adaa;
+        background-size:5px 5px ;/*关键背景的宽和高*/
+        background-image: linear-gradient(45deg,#478480,);
+        transform: translateY(25px)  rotateX(-90deg);   /*向下偏移和xuan转*/     
+    }
+    </style> 
+ 
+ 
+
+</head> 
+<body> 
+   
+    <div class="s" style="width:100%; height: 200px; background:transparent;  display: inline;"><img class="pic" src="./img/gif7.png" alt=""> 
+        
+        
+        <div class="nav"><ul style="float: left; width:100% ; display: inline; position: relative;top: -50px;  " >
+            <ul style="float: left; list-style: none; color: white;font-size: 25px ; font-family: '隶书';">
+            
+                    <li><a href="../家乡主题/美食.html" target="blank" >特色美食</a></li>
+                    <li><a href="../家乡主题/历史文化.html" target="blank">历史文化</a> </li> 
+                    <li><a href="#" target="blank">旅游胜地</a></li>  
+            </ul>   
+         </div>
+         <div class="shousuo" style="float: right; ">
+            <input type="text" class="input" >
+            <a href="#" class="cha"><img src="./img/搜索框.png" alt=""> </a>
+    
+    
+        </div>
+        
+    </div> 
+
+     <div class="a" style=" margin:  auto;">
+        <div class="b"><span>
+           HAINAN
+        </span></div>
+    </div>
+    <div class="fl" >
+        <div class="shang" style="--i:-40">welcome</div>
+        <div class="xia" style="--i:40">welcome</div>
+        <a href="../家乡主题/点击.html" class="di">      点击小彩蛋！</a>
+    </div>
+    <div>  
+
+
+    <div class="dengpao" style="margin: 100px auto; position: absolute; top: 500px;">
+        <span style="--i:1">H</span>
+        <span style="--i:2">A</span>
+        <span style="--i:3">I</span>
+        <span style="--i:4">N</span>
+        <span style="--i:5">A</span>
+        <span style="--i:6">N</span>
+    
+    </div>
+    <div class="shiping" style="display: inline; height: 300; width: 700px; float: right; border: 2px solid black; border-radius: 20px; position: absolute; top: 800px; right: 50px;" >
+        <video  style="width: 702px; border-radius: 19px;" src="./img/7d09c9d9c69854744bc3ee6cccd688af.mp4" autoplay controls></video>
+    </div>
+
+
+
+<div class="wenzi2" style="color: white; font-family:'隶书' ;font-size: 20px; width: 600px; position: absolute; top: 800px;">
+ 
+    <p class="p1">
+        海边很美；但美的不是海，是天。三亚的天空是没有灰色的淡蓝调，透彻的像块琉璃，干净，释然。比起略带一点青绿色的日出</p>
+    <p class="p2"> 我更喜欢粉色的日落，平常碧蓝的海，在日落余晖的渲染下呈现对立色的交融，如临大师笔下的画中世界</p> 
+    <p class="p3"> 再等数分钟，天空将由粉色推向紫色，海面黯然，移步至沙滩之后，隔着喧闹的酒吧，再观海，椰林在光线的作用下抹去了固有色，</p> 
+    <p class="p4">只剩一片片黑色剪影，在重色的衬托下，天空像是一杯置于烛光下的葡萄酒，醉人心瞳</p>
+
+
+
+</p>
+</div>
+</div>
+
+
+<div class="a2" style="position: absolute; top: 1400px; left: 50%;">
+    <div class="b2">
+        <div class="c2" style="--i:0"></div>
+        <div class="d2" style="--i:1"></div>
+        <div class="e2" style="--i:2"></div>
+    </div>
+</div>
+
+
+
+    <script>
+        var wenzi=['海南我爱你！',
+        '海南真美！','海南是我家!'];
+         document.onclick=function(x){
+            var span=document.createElement('span');
+            span.style.left=x.clientX+'px';
+            span.style.top=x.clientY+'px';
+            span.style.color='blanchedalmond';
+            span.style.position='absolute';
+            span.style.transition=1+'s';
+            /*输出文字*/ 
+            span.innerHTML=wenzi[Math.floor(Math.random()*wenzi.length)];
+            /*添加span*//*动画*/
+            setTimeout(function(){
+                span.style.opacity = "1"
+                span.style.transform = "translateY(-100px)"
+            },100)
+            setTimeout(function(){
+                span.style.opacity = "0"
+                span.style.transform = "translateY(-230px)"
+            },1500)
+          
+           /*body. .appendchidh*/
+            var chi=document.getElementsByTagName('span');
+            for(var i = 0;i<chi.length;i++){
+                if(chi[i].style.opacity === "0"){
+                    document.body.removeChild(chi[i])
+                }
+            }
+            document.body.appendChild(span);
+         }
+   
+
+    </script>
+
+
+
+
+</body> 
+
+
+</html>

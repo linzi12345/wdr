@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     body{
+        background-color: aqua;
+     }
+     span{
+            /* 让弹出来的文字不被选中，影响操作体验 */
+            user-select: none;
+            cursor: default;
+            font-size: 20px;
+           
+    
+            transition: 1s;
+        }
+</style>
+<body>
+    
+    <script>
+        var wenzi=['海南我爱你！',
+        '海南真美！','海南是我家!'];
+         document.onclick=function(x){
+            var span=document.createElement('span');
+            span.style.left=x.clientX+'px';
+            span.style.top=x.clientY+'px';
+            span.style.color='blanchedalmond';
+            span.style.position='absolute';
+            span.style.transition=1+'s';
+            /*输出文字*/ 
+            span.innerHTML=wenzi[Math.floor(Math.random()*wenzi.length)];
+            /*添加span*//*动画*/
+            setTimeout(function(){
+                span.style.opacity = "1"
+                span.style.transform = "translateY(-100px)"
+            },100)
+            setTimeout(function(){
+                span.style.opacity = "0"
+                span.style.transform = "translateY(-230px)"
+            },1500)
+          
+         
+            var you=document.getElementsByTagName('span');
+            for(var i = 0;i<you.length;i++){
+                if(you[i].style.opacity === "0"){
+                    document.body.removeChild(you[i])
+                }
+            }
+            document.body.appendChild(span);
+         }
+   
+
+    </script>
+</body>
+</html>

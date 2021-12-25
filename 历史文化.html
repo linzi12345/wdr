@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>历史文化</title>
+<style>
+
+    body{
+
+        background-color: brown;
+       height: 1200px;
+    }
+
+    .di{
+
+        background-color: brown;
+        margin: 150px auto;
+        
+        align-items: center;
+        width: 400px;
+        height: 500px;
+        overflow: hidden;
+        transition:.8s ;
+    }
+    .di img{
+        width: 400px ;
+        height: 300px;
+        transition:.8s ;
+        border-radius: 20px;
+    }
+    .di:hover img{
+        width: 430px;
+        height: 400px;
+        transform: translateZ(30px);
+        border-radius: 50%;
+
+    }
+    
+
+
+
+
+    .wenzi2{
+            position: absolute;
+            top: 35%;
+            left: 50%;
+        }
+      
+        .wenzi2 p{
+            
+            transition: .6s;
+         
+
+        }
+        .wenzi2:hover .p1 {
+            opacity: 1;
+            transform: translateX(30px);
+
+        }
+        .wenzi2:hover .p2 {
+            opacity: 1;
+            transform: translateX(-35px);
+        }
+        .wenzi2:hover .p3 {
+            opacity: 1;
+            transform: translateX(35px);
+        }
+        .wenzi2:hover .p4 {
+            opacity: 1;
+            transform: translateX(-35px);
+        }
+        
+/*按钮*/
+        a{
+    position: absolute;
+    top: 20%;
+    right:20px;
+    transform: translate(-50%,-50%);
+    text-decoration: none;
+    width: 400px;
+    height: 100px;
+    font-size: 24px;
+    background-image: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3d,#03a9f4);
+    line-height: 100px;
+    text-align: center;
+    border-radius :60px;
+    transform: translate(-50%,-50%);
+    text-transform: uppercase;/**/
+    background-size:400%;/* */
+    color: black;
+    z-index: 1;
+
+}
+.wenzi2 img{
+    position: relative;
+    left: 350px;
+}
+a::before{
+    content: "";
+    position: absolute;
+    left: -5px;
+    right: -5px;
+    top: -5px;
+    bottom: -5px;
+    background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3d,#03a9f4);
+     border-radius:50px ;
+    filter: blur(20px);
+    z-index: -1;
+}
+a{
+    animation: sun 7s infinite;
+}@keyframes sun{
+       100%{
+           background-position:-400% 0 ;
+       } 
+    
+}
+body{
+            background-color: brown
+        }
+        .a{
+            position: relative;
+            perspective: 1600px;/**/
+            top: 220px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .b{
+            width: 400px;
+            height: 250px;
+            position: absolute;
+            transform-style: preserve-3d;
+            animation: a 8s infinite cubic-bezier(.7,0,.17,1);
+        }
+        .b div{
+            position: absolute;
+            background-size: cover;
+            opacity: .9;
+            width: 400px;
+            height: 250px;
+            transform: rotateY(calc(var(--i)*120deg)) translateZ(600px);
+        }
+        @keyframes a{
+            0%{
+                transform: translateZ(-100px) rotateY(0);
+            }
+            33%{
+                transform: translateZ(-100px) rotateY(-120deg);
+            }
+            66%{
+                transform: translateZ(-100px) rotateY(-240deg);
+            }
+            100%{
+                transform: translateZ(-100px) rotateY(-360deg);
+            }
+        }
+        .c{
+            background-image: url("img/文化2.gif");
+        }
+        .d{
+            background-image: url("img/文化.gif");
+        }
+        .e{
+            background-image: url("img/文化3.gif");
+        }
+
+</style>
+</head>
+
+<body>
+      
+    <div class="di" style="display: inline;position: absolute; top: 350px; left: 50px; width: 500px;">
+        <img src="./img/历史文化裁剪.jpg" alt="">
+
+    </div>
+    <img src="./img/gif5.png" alt="" style="position: absolute;  top: 500px; right: 50px;" >
+   
+    <div class="wenzi2" style="color: white; font-family:'隶书' ;font-size: 20px; width: 500px; position: absolute; top: 500px;" >
+        <img src="" alt="">
+        <p class="p1">
+
+        海南省，简称：琼 地址临近琼州海峡与广东省海安县相隔18海里，海南的海岸线全长1823公里，</p>
+        <p class="p2"> 人口925万，陆地面积3.54万平方公里。海域面积有200万平方公里，是全国陆地面积最小的省，1988年从广东省独立政务 独立建省 。</p> 
+        <p class="p3">  2010年1月4日成为国际旅游岛，2018年4月13日建设自贸区，2020年6月1日正式向全球宣布海南自由贸易港建设总体方案。</p> 
+        <p class="p4">2021年6月10日中华人民共和国海南自由贸易港法正式颁布，中国向全球宣传海南自由贸易港。</p> 
+        
+    </p>
+    
+    
+    
+    <p style="position: absolute; top: 400px;">海南虽是建省时间不长、陆地面积不大，却是我国国土(含海洋)面积最大的省份，且是历史悠久，人文资源极为丰富的地区。
+        据考证，早在一万年前，三亚落笔洞就有人类活动的遗迹。新石器时代早期的贝丘遗址已在东方、乐东等地发现。
+        而新石器时代中期的石贡、红衣陶、纺轮遗物等，也早分别在陵水、定安、五指山等地出土。根据中科院考古所专家对陵水桥山遗址考古确认，
+        桥山遗址属于新石器时代晚期遗址，距今4000年左右，其面积约5万平方公里，表明当时已经具备了先进的制陶技术, 经济活动活跃。悠悠上万年，遥遥数千里。
+        在漫长而久远的历史进程中，海南这个孤悬海外的离岛，也不曾落下与中原同迈向人类文明的脚步。
+        </p>
+    </div>
+
+
+
+ </div>
+
+
+ <div class="a">
+    <div class="b">
+        <div class="c" style="--i:0"></div>
+        <div class="d" style="--i:1"></div>
+        <div class="e" style="--i:2"></div>
+    </div>
+</div>
+
+
+</body>
+</html>
