@@ -4,40 +4,90 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>海南美食</title>
-    <link rel="stylesheet" href="美食.css">
-    <style>
-        h1{
-            line-height: 6em;
-            font-style:rgba(128, 0, 128, 0.87);
-        }
-      
-    </style>
-</head>
-<body>
-    <h1 align="center">海南特色美食</h1>
-    <ul class="box">
+    <title>美食</title>
+<style>
+
+
     
-    <li>
-        <a href="../家乡主题/东山羊.html" target="blank"><img src="./img/美食2.jpg" alt=""></a>
-        <div class="text">东山羊</div>
-    </li>
-    <li>
-        <a href="../家乡主题/和乐蟹.html" target="blank"><img src="./img/美食4.jpg" alt=""></a>
-        <div class="text">和乐蟹</div>
-    </li>
-    <li>
-        <a href="../家乡主题/嘉积鸭.html" target="blank"></a><img src="./img/美食5.jpg" alt=""></a>
-        <div class="text">嘉积鸭</div>
-    </li>
-    <li>
-        <a href="../家乡主题/文昌鸡.html" target="blank"><img src="./img/美食2.jpg" alt=""></a>
-        <div>文昌鸡</div>
-    </li>
-    <li>
-        <a href="../家乡主题/特色小吃.html" target="blank"><img src="./img/美食2.jpg" alt=""></a>
-        <div>特色小吃</div>
-    </li>
-    </ul>
+html,body{
+      width: 100%;
+     height: 100%;
+    }
+  body{
+    overflow:hidden;
+      font-size: 7px;
+      margin: 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: table;
+      background-image: linear-gradient( 0deg,rgba(240, 237, 104, 0.849),rgba(141, 247, 238, 0.301));
+    }
+    img{
+     width: 260px;
+     height: 260px;  
+     margin: 20px; 
+     transition: transform 0.8s;
+  
+    }
+    #div1{
+        display: table-cell; 
+        vertical-align: middle;
+        text-align: center;
+    } 
+    .a{
+        transform: rotate(12deg);  
+      }
+      .b{
+          transform: rotate(14deg);  
+        }
+        .c{
+          transform: rotate(-5deg);  
+        }
+        .d{
+          transform: rotate(15deg);  
+        }
+        .e{
+          transform: rotate(-8deg);  
+        }
+        .f{
+          transform: rotate(12deg);  
+        }
+        .g{
+          transform: rotate(12deg);  
+        }
+        .h{
+          transform: rotate(-3deg);  
+        }
+        img:hover{
+            transform: scale(2) rotate(0);
+        }
+        .foot{
+          width: 240px;
+          height: 20px;
+        text-align: center;
+        position:absolute;
+        left: 640px;
+        top: 740px;
+   
+      }
+</style>
+ 
+</head>
+<body background="img\7.jpg">
+
+<div id="div1" >
+    <a href="https://baike.baidu.com/item/%E6%B5%B7%E5%8D%97%E6%96%87%E6%98%8C%E9%B8%A1/160878?fromtitle=%E6%96%87%E6%98%8C%E9%B8%A1&fromid=1207752&fr=aladdin" target="blank"><img src="/img/文昌鸡1.png" class="a"></a>
+    <a href="https://baike.baidu.com/item/%E5%98%89%E7%A7%AF%E9%B8%AD" target="blank"><img src="/img/和乐蟹1.png" class="b"></a>
+    <a href="https://baike.baidu.com/item/%E5%92%8C%E4%B9%90%E8%9F%B9" target="blank"><img src="/img/嘉积鸭.jpg" class="d"></a>
+    <a href="https://baike.baidu.com/item/%E4%B8%87%E5%AE%81%E4%B8%9C%E5%B1%B1%E7%BE%8A?fromtitle=%E4%B8%9C%E5%B1%B1%E7%BE%8A&fromid=1208051" target="blank"><img src="/img/东山羊.jpg" class="c"></a>
+    <br>
+    <a href="https://baike.baidu.com/item/%E6%B8%85%E8%A1%A5%E5%87%89" target="blank"><img src="/img/小吃9.jpg" class="e"></a>
+    <a href="https://baike.baidu.com/item/%E6%B5%B7%E5%8D%97%E7%B2%89" target="blank"><img src="/img/小吃2.jpg" class="f"></a>
+    <a href="https://baike.baidu.com/item/%E6%B5%B7%E5%8D%97%E6%97%A9%E8%8C%B6" target="blank"><img src="/img/小吃3.jpg" class="g"></a>
+    <a href="https://baike.baidu.com/item/%E8%8A%92%E6%9E%9C%E8%82%A0%E7%B2%89/2349350" target="blank"><img src="/img/小吃7.jpg" class="h"></a>
+</div> 
+<div class="foot">
+    详情请点击图片了解~~~
+  </div>
 </body>
 </html>
